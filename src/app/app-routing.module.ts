@@ -7,7 +7,9 @@ import { HomeComponent } from './site/components/home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
+  { path: 'auth', loadChildren: () => import('./feature/auth/auth.module').then(m => m.AuthModule) },
+  { path: 'chore-tracker', loadChildren: () => import('./feature/chore-tracker/chore-tracker.module').then(m => m.ChoreTrackerModule) }
 ];
 
 @NgModule({

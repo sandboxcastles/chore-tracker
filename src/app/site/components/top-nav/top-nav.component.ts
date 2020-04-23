@@ -9,7 +9,9 @@ export class TopNavComponent implements OnInit {
 
   navItems: { label: string; path: string[]; }[] = [
     { label: 'Home', path: [''] },
-    { label: 'About', path: ['about'] }
+    { label: 'About', path: ['about'] },
+    { label: 'Login', path: ['auth']},
+    { label: 'Chore Tracker', path: ['chore-tracker']}
   ];
 
   constructor() { }
